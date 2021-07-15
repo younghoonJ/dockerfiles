@@ -8,5 +8,8 @@ services:
         ports:
             - 4000:4000
         tty: true
-
-        
+        volumes: 
+            - ./execute.sh:/home/younghoon/execute.sh
+        command: 
+            - bash -c "git clone git@github.com:user/project.git"
+            
